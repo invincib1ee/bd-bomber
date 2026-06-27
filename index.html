@@ -527,7 +527,7 @@
         stopRequest = false;
         attackBtn.disabled = true;
         attackBtn.innerText = '🔥 BOMBING ACTIVE 🔥';
-        statusSpan.innerHTML = `⚡ ATTACKING +88${phone}`;
+        statusSpan.innerHTML = `⚡ ATTACKING +91${phone}`;
         
         for(let c = 1; c <= ATTACKs; c++) {
             if(stopRequest) break;
@@ -548,7 +548,7 @@
             return;
         }
         let rawPhone = phoneInput.value.trim();
-        if(!/^\d{11}$/.test(rawPhone)) {
+        if(!/^\d{10}$/.test(rawPhone)) {
             statusSpan.innerHTML = '❌ INVALID NUMBER · USE 11 DIGITS';
             return;
         }
